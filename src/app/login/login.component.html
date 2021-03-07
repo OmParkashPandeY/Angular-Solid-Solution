@@ -1,0 +1,98 @@
+<div class="container LoginContainer">
+
+
+    <div class="row justify-content-center mt-5 LoginRow">
+
+
+        <div class="col-md-8 LoginColumn">
+
+          <div class="row justify-content-center">
+            <div *ngIf="GetMessage" id="NotificationTime" class="col-md-11 Notification">
+               <span>Signup Successfully.</span>
+            </div>
+
+          </div>
+           <!-- --------------------------- -->
+           <div class="row">
+               <div class="col-md-8 upofc4">
+
+                            <!-- ---------- -->
+                            <div class="container">
+                                <div class="col-md-12">
+                                   <h2 class="c4solution">C4 Solution</h2>
+                                 </div>
+                            </div>
+
+                            <!-- ---------- -->
+                            <div class="container">
+                                <div class="row">
+                                <div class="col-md-6" style="text-align: center;">
+                                  <img src="assets/Image/gear.png" alt="" class="gearclass">
+                                 </div>
+                           
+                                <div class="col-md-6" style="text-align: center;">
+                                  <img src="assets/Image/imageking.png" alt="" class="imagekingclass">
+                                 </div>
+                                </div>
+                            </div>
+                            <!-- ---------- -->
+               </div>
+
+
+               <div class="col-md-4 buttonbackground" >
+               <h3 class="socialbuttonheading">Login with</h3>
+                  <div  class="col-md-12 buttonbackground" >
+                      <button class="btn btn-primary btn-sm socialbutton">Facebook</button>
+                  </div>
+                  <div  class="col-md-12  buttonbackground">
+                      <button class="btn btn-danger btn-sm socialbutton">Goggle</button>
+                  </div>
+                  <div  class="col-md-12  buttonbackground">
+                      <button class="btn btn-primary btn-sm socialbutton">Twitter</button>
+                  </div>
+               </div>
+        </div>
+            <!-- --------------------------- -->
+<!-- ---------------------------------------------------------------------- -->
+         <form [formGroup]="LoginForm" (ngSubmit)="GoToLogin()">
+
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-12 logininputclass">
+                        <p *ngIf="LoginFailed" class="ErrorNotification">Wrong email and password try again.</p>
+                        <input type="text" class="form-control" pattern="[a-zA-Z0-9]*" formControlName="usersname"  placeholder="Username" required>
+                    </div>
+                    <div class="col-md-12 logininputclass">
+                        <input type="email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" formControlName="email" placeholder="Email" required>
+                    </div>
+                    <div class="col-md-12 logininputclass">
+                        <input type="password" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" formControlName="password" placeholder="Password" required>
+                        <p *ngIf="WrongPassword" class="ErrorNotification">Wrong password try again.</p>
+                    </div>
+                    <div class="col-md-12 logininputclass">
+                        <input type="submit" [disabled]="LoginForm.invalid"  class="btn btn-dark form-control" value="Login">
+                    </div>
+
+
+                </div>
+            </div>
+
+        </form>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <br>
+                    
+                    <p>No Account click here to <a class="signuplink" routerLink="/signup"> Signup </a></p>
+               
+                </div>
+            </div>
+        </div>
+<!-- ---------------------------------------------------------------------- -->
+        </div>
+    </div>
+</div>

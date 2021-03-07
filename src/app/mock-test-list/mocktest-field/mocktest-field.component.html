@@ -1,0 +1,56 @@
+<div class="mocktestfield">
+    <nav class="navbar">
+       <h3>Mocktest Field</h3>
+    </nav>
+
+
+<form #TestBookField="ngForm" (ngSubmit)="SubmitTestBook(TestBookField.value)">
+    
+    <div class="container">
+
+        <div class="row" *ngFor="let Print of QuestionContainers">
+            
+            <div class="col-md-12">
+                <input
+
+                type="text" 
+                disabled 
+                class="form-control" 
+                name="{{Print.id}}" 
+                placeholder="{{Print.questiondetails}}" ngModel> 
+
+                <input 
+                type="text"  
+                class="form-control d-none"
+                name="{{Print.id}}" 
+                value="{{Print.id}}" ngModel>  
+            </div>
+
+
+            <div class="col-md-3">
+                <input type="radio" name="{{Print.id}}" class="" value="A" ngModel>
+                  {{Print.option1}}
+            </div>
+            <div class="col-md-3">
+                <input type="radio" name="{{Print.id}}" class="" value="B" ngModel>
+                  {{Print.option2}}
+            </div>
+            <div class="col-md-3">
+                <input type="radio" name="{{Print.id}}" class="" value="C" ngModel>
+                  {{Print.option3}}
+            </div>
+            <div class="col-md-3">
+                <input type="radio" name="{{Print.id}}" class="" value="D" ngModel>
+                  {{Print.option4}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <input type="submit" class="form-control btn btn-primary" value="SUBMIT">
+            </div>
+        </div>
+
+    </div>
+
+</form>
+</div>

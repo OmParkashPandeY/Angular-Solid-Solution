@@ -1,0 +1,126 @@
+body
+{
+    scroll-behavior: smooth;
+    transition: 5s;
+}
+.homepagebackground
+{
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+}
+.coverimage
+{
+   
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    transition: 5s;
+    overflow: hidden;
+
+}
+.coverimage:hover
+{
+      margin-left: -10%;
+      margin-right: -10%;
+      width: 120%;
+      height: 120vh;
+}
+.cssbuttongetstart
+{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 15%;
+    font-family: 'Lobster',cursive;
+    transform: translate(-50%,-50%);
+    border-radius: 50px;
+    transition: 1s;
+}
+.cssbuttongetstart:hover
+{
+    background-color: none;
+}
+
+
+.cssbuttonlogin
+{
+    position: absolute;
+    top: 12%;
+    right: 0%;
+    transform: translate(-50%,-50%);
+    width: 10%;
+    transition: 1s;
+}
+.cssbuttonlogin:hover
+{
+    padding: 2px 50px 2px 50px;
+    background-color: rgb(245, 145, 87);
+    color:white;
+}
+.logintex
+{
+    font-family: 'Lobster', cursive;
+}
+.appname
+{
+    position: absolute;
+    top: 5%;
+    left: 2%;
+    font-size: 45px;
+    color:white;
+    transition: 2s;
+    font-family: 'Lobster', cursive;
+   
+}
+.appname:hover
+{
+    color: white;
+}
+
+.bottomtextmain
+{
+    width: 100%;
+    font-size: 50px;
+    padding:5px;
+    position: absolute;
+    top:20%;
+    transition: 2s;
+    color: rgba(192, 200, 247, 0.925);
+    font-family: 'Lobster', cursive;
+    border-bottom: 1px solid rgba(192, 200, 247, 0.925);
+ 
+ 
+}
+.bottomtextmain:hover
+{
+    color:rgb(0, 0, 105);
+    background-color: rgba(255, 255, 255, 0.76);
+    border:none;
+}
+
+@media only screen and (max-width: 1200px)
+{
+   
+} 
+@media only screen and (max-width: 992px)
+{
+   .cssbuttongetstart{width: 20%;}
+   .cssbuttonlogin{width: 15%;}
+} 
+@media only screen and (max-width: 768px)
+{
+    .cssbuttongetstart { top: 75% ; }
+    .cssbuttongetstart{width: 30%;}
+    .cssbuttonlogin{width: 20%;}
+} 
+@media only screen and (max-width: 600px)
+{
+    .cssbuttongetstart{width: 30%;}
+    .cssbuttonlogin{width: 20%;}
+} 
+@media only screen and (max-width: 375px)
+{
+    .cssbuttongetstart{width: 30%;}
+    .cssbuttonlogin{width: 20%;}
+} 

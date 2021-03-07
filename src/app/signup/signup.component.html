@@ -1,0 +1,120 @@
+<div class="signupbackground">
+    <div class="row mr-1 justify-content-center signupbackgroundrow">
+        <div class="col-md-8 mt-5  signupbackgroundmainpart">
+            
+            
+    <!-- ----------------------------------- -->
+    <form [formGroup]="SignupUsers" (ngSubmit)="GetUsersValue()">
+        <div  class="container firstslide" id="firstslide">
+          
+             <!-- ----------------------------- -->
+
+             <div class="container heading mb-2">
+                <div class="row">
+                    <div class="col-md-12">
+                     <p></p>
+                    </div>
+                    <div class="col-md-4">
+                        <h1 class="HeadingText">C4 Solution</h1>
+                        <h6 class="HeadingTextsmall">Create a new Account</h6>
+                    </div>
+                    <div class="col-md-8">
+
+
+                      <div class="row" >
+
+                          <div class="col-md-12">
+                             <span class="pngiconbox"><img src="assets/PPTIMAGE/horizontalicon11.png"  alt=""></span>
+                          </div>
+                      </div>
+                      <br>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ----------------------------- -->
+           
+
+            <!-- ----------------------------- -->
+
+            <div class="row">
+                <div class="col-md-12">
+                    <br>
+                   <input type="text" formControlName="firstname" required pattern="[A-Za-z]*" minlength="2" maxlength="20" class="form-control" placeholder="First Name">
+                </div>
+
+                <div class="col-md-12">
+                    <input type="text" formControlName="lastname" required  minlength="2" maxlength="20" pattern="[A-Za-z]*"  class="form-control" placeholder="Last Name">
+                </div>
+
+                <div class="col-md-12">
+                    <span class="btn btn-primary btn-md nextbutton mt-2 mb-2" (click)="GotoSecondSlide()">Next</span>
+                </div>
+            </div>
+        </div>
+
+           
+    <!-- ----------------------------------- -->
+
+
+
+        <div  class="container secondslide" id="secondslide">
+            <!-- ----------------------------- -->
+
+            <div class="container heading mb-2">
+                <div class="row">
+                    <div class="col-md-12">
+                     <p></p>
+                    </div>
+                    <div class="col-md-4">
+                        <h1 class="HeadingText">C4 Solution</h1>
+                         <h6 class="HeadingTextsmall">Create a new Account</h6>
+                    </div>
+                    <div class="col-md-8">
+
+
+                      <div class="row" >
+
+                          <div class="col-md-12">
+                             <span class="pngiconbox"><img src="assets/PPTIMAGE/horizontalicon11.png"  alt=""></span>
+                          </div>
+                      </div>
+                      <br>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ----------------------------- -->
+         
+            <div class="row">
+                <div class="col-md-12">
+                   <br>
+                    <input type="text" formControlName="usersname" required maxlength="16" minlength="3" pattern="[a-zA-Z0-9]*" class="form-control" placeholder="Username">
+                 </div>
+ 
+                 <div class="col-md-12">
+                     <input type="email" formControlName="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="form-control" placeholder="Email">
+                     <p *ngIf="Errors" class="ErrorsResult">{{Errors.email}}</p>
+                </div>
+
+                 <div class="col-md-12">
+                     <input type="password" formControlName="password" required maxlength="20" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" class="form-control" placeholder="Password">
+                 </div>
+ 
+                 <div class="col-md-12">
+                    <span class="btn btn-primary btn-md backbutton mt-2 mb-2" (click)="GotoFirstSlide()">Back</span>
+
+                     <button type="submit" [disabled]="SignupUsers.invalid" class="btn nextbutton btn-primary btn-md mt-2 mb-2">Submit</button>
+                 </div>
+            </div>
+        </div>
+    </form>
+
+
+
+
+     <!-- ----------------------------------- -->
+        </div>
+    </div>
+</div>
+

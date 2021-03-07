@@ -1,0 +1,60 @@
+.Headingtext
+{
+    font-family: 'Concert One', cursive;
+    color:white;
+}
+.navbar
+{
+    background:linear-gradient(To right, rgb(2, 5, 75) ,rgb(10, 5, 83));
+}
+.navbarbutton
+{
+    margin-right: 5%;;
+}
+.InputboxColoum
+{
+    display: inline;
+   
+}
+
+.SearchIconContainer i
+{
+    display: none;
+    font-size: 24px;
+    color:white;
+    margin-left: 5%;
+   
+}
+/* ---------------------------------------------------------------------------------- */
+
+.SidebarBackground
+{
+    position: absolute;
+    top: 10%;
+    height: 90vh;
+    width: 100%;
+    overflow: auto;
+    display: none;
+    background-color: rgba(239, 241, 241, 0.747);
+
+}
+/* ---------------------------------------------------------------------------------- */
+@media only screen and (max-width: 1200px)
+{
+
+}
+@media only screen and (max-width: 992px)
+{
+
+}
+@media only screen and (max-width: 768px)
+{
+
+}
+@media only screen and (max-width: 600px)
+{
+  .InputboxColoum{display: none;}
+  .navbarbutton{display: none;}
+  .SearchIconContainer i {display: inline;}
+  /* .SidebarBackground {display: inline;} */
+}

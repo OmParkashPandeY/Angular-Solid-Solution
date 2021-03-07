@@ -1,0 +1,88 @@
+<app-testbook-navbar></app-testbook-navbar>
+<app-testbook-menubar></app-testbook-menubar>
+<!-- ------------------------------------------------------------------------------------- -->
+
+<div id="sidebar" class="sidebarbackground fixed-top ">
+
+
+</div>
+<!-- ----------------------------------------------------- -->
+<div class="sidebarshowhide fixed-top">
+  <i id="arrow" class="fa fa-arrow-circle-o-right sidebararrow"(click)="SidebarShowHide()" aria-hidden="true"></i>
+</div>
+<!-- ------------------------------------------------------------------------------------- -->
+
+<!-- ----------------------------------------------------- -->
+<div class="main-container">
+<!-- ----------------------------------------------------- -->
+    
+<div class="container FirstContainer" id="addnewtest">
+  <div class="row MainRow justify-content-center ">
+      <div class=" col-md-10 MainColumn">
+            
+        <nav class="navbar">
+            <h5>Add New Lession</h5>
+        </nav>
+
+        <form [formGroup]="UploadSubject" (ngSubmit)="UploadSubDetails()">
+
+            <div class="container">
+                <div class="row justify-content-center mt-5">
+                   
+                    <div class="col-md-8 mt-2">
+
+                       <input type="text" formControlName="subjectname" class="form-control" placeholder="Subject Name" required>
+                      
+                       <p *ngIf="ErrorsMessages" class="ErrorMessages"><span>{{ErrorsMessages.subjectname}}</span></p>
+
+                    </div>
+
+                    <div class="col-md-8 mt-2">
+
+                       <select id="" class="form-control" formControlName="subjectlevel" required>
+                           <option  value="">Subject Level</option>
+                           <option  value="Basic">Basic</option>
+                           <option  value="Advance">Advance</option>
+                       </select>
+                        <p *ngIf="ErrorsMessages" class="ErrorMessages"><span>{{ErrorsMessages.subjectlevel}}</span></p>
+                    </div>
+
+                    <div class="col-md-8 mt-2">
+
+                       <input type="text" class="form-control" formControlName="lessionname" placeholder="Lession Name" required>
+                     
+                       <p *ngIf="ErrorsMessages" class="ErrorMessages"><span>{{ErrorsMessages.lessionname}}</span></p>
+
+                    </div>
+
+                    <div class="col-md-8 mt-2">
+
+                       <button type="submit" [disabled]="UploadSubject.invalid"  class="form-control btn btn-dark btn-sm">UPLOAD</button>
+
+                    </div>
+                </div>
+            </div>
+
+        </form>
+
+        <div *ngIf="SuccessMessage" class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <br><br><br><br>
+                    <input disabled type="text" class="form-control SuccessMessage" value="{{SuccessMessage}}">
+                </div>
+            </div>
+        </div>
+
+
+         
+        </div>
+    </div>
+</div>
+<!-- ----------------------------------------------------- -->
+</div>
+<!-- ----------------------------------------------------- -->
+
+
+
+<!-- ------------------------------------------------------------------------------------- -->

@@ -1,0 +1,47 @@
+.buttonContainer
+{
+    border:none;
+    overflow: hidden;
+    width: 100%;
+    padding:25px;
+    
+}
+.firstContainer
+{
+    border-radius: 20px;
+    margin:25px;
+    width: 30%;
+    background-color: white;
+    box-shadow: 0px 0px  35px #87899e;
+}
+button
+{
+  background: linear-gradient(to right,rgb(68, 68, 241),rgb(11, 11, 97));
+  color:white;
+  transition: 3s;
+  border-radius: 50px;
+}
+button:hover
+{
+    background: linear-gradient(to right,rgb(11, 11, 97),rgb(68, 68, 241));
+}
+/* ------------------------------------------------------------------------------------------------------ */
+@media only screen and (max-width:1200px)
+{
+    
+}
+@media only screen and (max-width:992px)
+{
+    .firstContainer{width:50%;margin:25px 0px}
+    .buttonContainer{padding:15px}
+}
+@media only screen and (max-width:768px)
+{
+    .firstContainer{width:60%;margin:25px 0px}
+    .buttonContainer{padding:15px}
+}
+@media only screen and (max-width:600px)
+{
+   .firstContainer{width: 100%;margin:25px 0px}
+   .buttonContainer{padding:15px}
+}

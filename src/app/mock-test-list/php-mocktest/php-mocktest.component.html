@@ -1,0 +1,87 @@
+<!-- ------------------------------------------------------------------------------------ -->
+<nav class="navbar">
+    <h2><span class="HeadingText">PHP Basic Mocktest</span></h2>
+    <span class="btn btn-light nabvarbutton {{Activebutton}}" (click)="TBSActive()">Testbook Status</span>
+</nav>
+<!-- ------------------------------------------------------------------------------------ -->
+
+<div class="Mainbackground">
+
+    <!-- ------------------------------------------------------------------------------------ -->
+    <div *ngIf="TestbookStatusActive" class="TestbookStatus fixed-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    Testbook Status
+                </div>
+            </div>
+        </div>
+    </div>
+
+ 
+              
+    <!-- ------------------------------------------------------------------------------------ -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 my-2 Testbookbackground" *ngFor="let print of TestbookDetailsbox">
+                <div class="listgroup w-100 my-2 px-2">
+                    <ul class="list-group">
+
+                            <li class="list-group-item  list-group-item-dark containerbodytoptex">
+                             <h4><span>{{print.testbookname}}</span></h4>
+                            </li>
+
+                            <li class="list-group-item bg-light ">
+                                <h6 class="testquestion">Testbook Name -
+                                    <span>{{print.testbookname}}</span>
+                                </h6>
+                            </li>
+
+                            <li class="list-group-item bg-light ">
+                                <h6 class="testquestion">Total Questions -
+                                    <span>{{print.totalquestion}}</span>
+                                </h6>
+                            </li>
+
+                            <li class="list-group-item bg-light ">
+                                <h6 class="testmarks">Total Marks -
+                                    <span>{{print.testbookmarks}}</span>
+                                </h6>
+                            </li>
+
+                            <li class="list-group-item bg-light "> 
+                                <h6 class="testtime">Test time -
+                                    <span>{{print.testtime}}</span>
+                                </h6>
+                            </li>
+
+                            <li class="list-group-item bg-light "> 
+                               <div class="row">
+                                    <div class="col-md-6">
+                                        <span  class="btn btn-success my-1 w-100"> 
+                                            <h6 class=" notattempt ">Status</h6>
+                                        </span>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <button class="btn btn-success my-1 w-100"> 
+                                           <h6 class=" notattempt">Not Attempt</h6>
+                                        </button>
+                                    </div>
+                                </div>  
+                            </li>
+
+                            <li class="list-group-item bg-light "> 
+                                <a routerLink="/mock-test-list/mocktest-field">
+                                    <button  class="btn btn-secondary submitbutton text-uppercase w-100">Click Here to Start</button>
+                                </a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------ -->
+
+</div>

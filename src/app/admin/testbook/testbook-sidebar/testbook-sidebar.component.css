@@ -1,0 +1,56 @@
+/* ------------------------------------------------------------------------------------------------------ */
+
+.Mainbackground
+{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(25, 3, 82);
+    overflow: auto;
+}
+
+.MainRow
+{
+    height: 120vh;
+    overflow: hidden;
+}
+.Sidebarbackground
+{
+    position: absolute;
+    top: 17%;
+    width: 25%;
+    height: 100vh;
+    background-color: rgb(29, 49, 161);
+}
+.SidebarColumn button
+{
+    width: 100%;
+    margin-bottom: 2px;
+    background-color: rgb(13, 6, 54);
+}
+
+.dropdownbutton
+{
+    width: 100%;
+    background-color: rgb(10, 3, 58);
+}
+
+/* ------------------------------------------------------------------------------------------------------ */
+
+@media only screen and (max-width:1200px)
+{
+    
+}
+@media only screen and (max-width:992px)
+{
+    .Sidebarbackground{top:23%;}  
+}
+@media only screen and (max-width:768px)
+{
+    .Sidebarbackground{display:none;}  
+}
+@media only screen and (max-width:600px)
+{
+    .Sidebarbackground{display:none;}  
+}
+
+/* ------------------------------------------------------------------------------------------------------ */

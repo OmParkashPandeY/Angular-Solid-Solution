@@ -1,0 +1,23 @@
+.sidebarbackground
+{
+  
+   top: 98px;
+   width: 20%;
+   margin-left: -20%;
+   transition: 1s;
+   background-color: gray;
+}
+.sidebarshowhide
+{
+    position: absolute;
+    top: 100px;
+    width: 3%;
+    height: 6vh;
+
+}
+.sidebararrow
+{
+    font-size: 36px;
+    margin-left: 2px;
+    color:rgb(21, 4, 99);
+}

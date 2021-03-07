@@ -1,0 +1,41 @@
+.background
+{
+    margin-top: 0px;
+    padding: 5px 0px 5px 0px;
+    background-color: rgb(50, 43, 138);
+}
+.ButtonColumn 
+{
+  border:none;
+
+}
+.ButtonColumn button
+{
+  width: 100%;
+  color: rgb(201, 199, 199);
+  background-color: none;
+
+}
+.ButtonColumn button:hover
+{
+  color: rgb(10, 9, 92);
+  background-color: rgb(212, 204, 204);
+
+}
+
+@media only screen and (max-width:1200px)
+{
+  
+}
+@media only screen and (max-width:992px)
+{
+
+}
+@media only screen and (max-width:768px)
+{
+  .background{display: none;}
+}
+@media only screen and (max-width:600px)
+{
+  .background{display: none;}
+}

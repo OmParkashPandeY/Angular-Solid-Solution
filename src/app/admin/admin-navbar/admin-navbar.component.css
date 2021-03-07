@@ -1,0 +1,35 @@
+.navbar
+{
+    background: linear-gradient(To right, rgb(58, 43, 190),rgb(93, 93, 248));
+}
+.headingtext
+{
+    color:rgb(180, 187, 189);
+}
+.Adminicon
+{
+    display: none;
+    font-size: 40px;
+    color: rgb(194, 192, 192);
+}
+
+/* ------------------------------------------------------------------------------------------------------ */
+
+@media only screen and (max-width : 1200px)
+{
+    
+}
+@media only screen and (max-width : 992px)
+{
+    
+}
+@media only screen and (max-width : 768px)
+{
+    .Adminicon{display: block;}
+    .headingtext{display: none;}
+}
+@media only screen and (max-width : 600px)
+{
+    .Adminicon{display: block;}
+    .headingtext{display: none;}
+}

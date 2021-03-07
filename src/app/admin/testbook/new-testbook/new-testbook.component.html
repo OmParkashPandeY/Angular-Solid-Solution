@@ -1,0 +1,85 @@
+<app-testbook-navbar></app-testbook-navbar>
+<app-testbook-menubar></app-testbook-menubar>
+<!-- ------------------------------------------------------------------------------------- -->
+
+<div id="sidebar" class="sidebarbackground fixed-top ">
+
+
+</div>
+<!-- ----------------------------------------------------- -->
+<div class="sidebarshowhide fixed-top">
+  <i id="arrow" class="fa fa-arrow-circle-o-right sidebararrow"(click)="SidebarShowHide()" aria-hidden="true"></i>
+</div>
+<!-- ------------------------------------------------------------------------------------- -->
+
+<!-- ----------------------------------------------------- -->
+<div class="main-container">
+<!-- ----------------------------------------------------- -->
+    
+<div class="container FirstContainer" id="addnewtest">
+  <div class="row MainRow justify-content-center ">
+      <div class=" col-md-10 MainColumn">
+            
+          <nav class="navbar">
+                <h5>Add New Testbook</h5>
+          </nav>
+           
+          <form [formGroup]="AddNewTestBook" (ngSubmit)="GetANTBDetails()">
+            <div class="container">
+
+              <div class="row">
+                <div class="col-md-6 my-1">
+                  <input type="text" class="form-control" formControlName="subject" placeholder="Subject Name" required>
+                </div>
+                <div class="col-md-6 my-1">
+                  <select formControlName="subjectlevel" id="" class="form-control" >
+                    <option selected value="">Subject Level</option>
+                    <option selected value="basic">Basic</option>
+                    <option selected value="condition">Condition</option>
+                    <option selected value="array">Array</option>
+                    <option selected value="function">Function</option>
+                    <option selected value="method">Method</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-8 my-1">
+                  <input type="text" class="form-control" formControlName="testbookname" placeholder="Testbook Name" required>
+                </div>
+                <div class="col-md-4 my-1">
+                  <input type="text" class="form-control" formControlName="totalquestion" placeholder="Total Question" required>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-4 my-1">
+                  <input type="text" class="form-control" formControlName="testbookmarks" placeholder="Testbook Marks" required>
+                </div>
+                <div class="col-md-8 my-1">
+                  <input type="text" class="form-control" formControlName="testtime" placeholder="Test Time" required>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 my-1">
+                  <input type="reset" class="btn btn-light w-100" value="RESET" >
+                </div>
+                <div class="col-md-6 my-1">
+                  <input type="submit" [disabled]="AddNewTestBook.invalid" class="btn btn-light w-100" value="UPLOAD">
+                </div>
+              </div>
+
+            </div>
+          </form>
+         
+        </div>
+    </div>
+</div>
+<!-- ----------------------------------------------------- -->
+</div>
+<!-- ----------------------------------------------------- -->
+
+
+
+<!-- ------------------------------------------------------------------------------------- -->

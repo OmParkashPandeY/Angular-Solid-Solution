@@ -1,0 +1,95 @@
+/* ------------------------------------------------------------------------------------------------------ */
+
+.Mainbackground
+{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(25, 3, 82);
+    overflow: auto;
+}
+
+.MainRow
+{
+    height: 120vh;
+    overflow: hidden;
+}
+.Sidebarbackground
+{
+    position: absolute;
+    top: 17%;
+    width: 25%;
+    height: 100vh;
+    background-color: rgb(29, 49, 161);
+}
+.SidebarColumn button
+{
+    width: 100%;
+    margin-bottom: 2px;
+    background-color: rgb(13, 6, 54);
+}
+.firstbutton
+{
+    margin-top: 10px;
+}
+h1{
+    color: white;
+}
+.SuccessMessage
+{
+    background-color: rgb(3, 71, 3);
+    color: rgb(212, 212, 212);
+}
+.ErrorMessages
+{
+    background-color: rgba(255, 255, 255, 0.603);
+    color: rgb(199, 0, 0);
+    text-align: center;
+    margin-top: 2px;
+    padding:0px 15px 0px 5px;
+
+}
+.dropdownbutton
+{
+    width: 100%;
+    background-color: rgb(10, 3, 58);
+}
+/* ------------------------------------------------------------------------------------------------------ */
+.FirstContainer nav
+{
+    margin-top: 5px;
+    background:linear-gradient(To right,rgb(114, 178, 238) ,rgb(41, 41, 250))
+}
+.SixthContainer nav
+{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background:linear-gradient(To right,rgb(114, 178, 238) ,rgb(41, 41, 250))
+}
+.SeventhContainer nav ,.EightContainerA nav
+{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background:linear-gradient(To right,rgb(114, 178, 238) ,rgb(41, 41, 250))
+}
+
+
+/* ------------------------------------------------------------------------------------------------------ */
+
+@media only screen and (max-width:1200px)
+{
+    
+}
+@media only screen and (max-width:992px)
+{
+    .Sidebarbackground{top:23%;}  
+}
+@media only screen and (max-width:768px)
+{
+    .Sidebarbackground{display:none;}  
+}
+@media only screen and (max-width:600px)
+{
+    .Sidebarbackground{display:none;}  
+}
+
+/* ------------------------------------------------------------------------------------------------------ */

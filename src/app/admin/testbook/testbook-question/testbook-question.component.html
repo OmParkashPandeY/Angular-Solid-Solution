@@ -1,0 +1,103 @@
+<!-- ------------------------------------------------------------------------------------- -->
+
+<app-testbook-navbar></app-testbook-navbar>
+<app-testbook-menubar></app-testbook-menubar>
+
+<!-- ------------------------------------------------------------------------------------- -->
+
+<div id="sidebar" class="sidebarbackground fixed-top ">
+
+
+</div>
+<!-- ----------------------------------------------------- -->
+<div class="sidebarshowhide fixed-top">
+  <i id="arrow" class="fa fa-arrow-circle-o-right sidebararrow"(click)="SidebarShowHide()" aria-hidden="true"></i>
+</div>
+<!-- ------------------------------------------------------------------------------------- -->
+
+<!-- ----------------------------------------------------- -->
+<div class="main-container">
+<!-- ----------------------------------------------------- -->
+    
+<div class="container FirstContainer" id="addnewtest">
+  <div class="row MainRow justify-content-center ">
+      <div class=" col-md-10 MainColumn">
+            
+          <nav class="navbar">
+                <h5>Add Question</h5>
+          </nav>
+
+         <form [formGroup]="QuestionUploadForm" (ngSubmit)="GetUploadQuestion()">
+          <div class="container">
+              <div class="row">
+
+                  <div class="col-md-12 mt-2">
+                    <input type="text" class="form-control" formControlName="testbookname" required placeholder="Testbook Name"> 
+                  </div>
+                  
+                  <div class="col-md-4 mt-2">
+                      <select id="SelectValue" class="form-control custom-select" formControlName="testsubject" required>
+                          <option value="">Subject Name</option>
+                          <option *ngFor="let Print of SubjectNameDetails" value="{{Print.subject_name}}">{{Print.subject_name}}</option>
+                      </select>
+                  </div>
+                 
+                  <div class="col-md-4 mt-2">
+                      <select class="form-control custom-select" formControlName="testlevel" required>
+                          <option value="">Subject Level</option>
+                          <option value="Basic">Basic</option>
+                          <option value="Advance">Advance</option>
+                      </select>
+                  </div>
+
+                  <div class="col-md-4 mt-2">
+                      <select class="form-control custom-select" formControlName="lession" required>
+                          <option value="">Lession Name</option>
+                          <option *ngFor="let Print of SubjectDetails" value="{{Print.lessionname}}">{{Print.lessionname}}</option>
+                      </select>
+                  </div>
+
+                  <div class="col-md-12 mt-2">
+                      <input type="text" class="form-control" formControlName="questiondetails" required placeholder="Question Details"> 
+                  </div>
+
+                  <div class="col-md-6 mt-2">
+                      <input type="text" class="form-control" formControlName="option1" required placeholder="First Option"> 
+                  </div>
+
+                  <div class="col-md-6 mt-2">
+                      <input type="text" class="form-control" formControlName="option2" required placeholder="Second Option"> 
+                  </div>
+
+                  <div class="col-md-6 mt-2">
+                      <input type="text" class="form-control" formControlName="option3" required placeholder="Third Option"> 
+                  </div>
+
+                  <div class="col-md-6 mt-2">
+                      <input type="text" class="form-control" formControlName="option4" required placeholder="Fourth Option"> 
+                  </div>
+
+                  <div class="col-md-12 mt-2">
+                      <input type="text" class="form-control" formControlName="answer" required placeholder="Answer"> 
+                  </div>
+
+                  <div class="col-md-6 mt-2">
+                      <input type="reset" value="RESET" class="form-control btn btn-outline-light btn-sm" > 
+                  </div>
+                  <div class="col-md-6 mt-2">
+                      <input type="submit" [disabled]="QuestionUploadForm.invalid" value="UPLOAD" class="form-control btn btn-outline-light btn-sm" > 
+                  </div>
+
+                </div>
+            </div>
+         </form>
+        </div>
+    </div>
+</div>
+<!-- ----------------------------------------------------- -->
+</div>
+<!-- ----------------------------------------------------- -->
+
+
+
+<!-- ------------------------------------------------------------------------------------- -->

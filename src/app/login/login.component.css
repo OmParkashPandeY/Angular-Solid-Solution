@@ -1,0 +1,128 @@
+.LoginColumn
+{
+   
+    border-radius: 20px;
+    box-shadow: 5px 5px 50px rgb(180, 174, 174);
+    margin: 10px;
+    padding: 15px;
+}
+.logininputclass
+{
+    margin-top:5px;
+    margin-bottom:5px;
+}
+.socialbuttonheading
+{
+  
+    transition: 2s;
+    font-family: 'Lobster', cursive;
+    color: rgb(22, 18, 224);
+}
+.socialbutton
+{
+    width:80%;
+    margin-top: 5px;
+    transition: 0.50s;
+    
+    
+}
+.socialbutton:hover
+{
+    width: 100%;
+  
+}
+.buttonbackground
+{
+    text-align: center;
+}
+.c4solution
+{
+    font-family: 'Lobster', cursive;
+    border-bottom: 2px solid gray;
+    color: rgb(177, 81, 3);
+}
+.c4solutionbackground
+{
+    background-color: rgb(221, 221, 221);
+}
+input
+{
+    margin-top: 5px;
+}
+
+.upofc4
+{
+    border:none;
+}
+.gearclass
+{
+    height: 100px;
+    margin-left: 0%;
+    transform: rotateZ(360deg);
+    animation-name: gearrounding;
+    animation-duration: 8s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    animation-direction:initial;
+    
+}
+
+.imagekingclass
+{
+    height: 100px;
+    animation-name: imageking;
+    animation-duration: 8s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+   
+}
+
+.signuplink
+{
+    color:rgb(4, 4, 165);
+    font-weight: bold;
+}
+.ErrorNotification
+{
+    background-color: white;
+    color: red;
+    padding: 2px;
+}
+.Notification
+{
+    
+    border-radius: 10px;
+    text-align: center;
+    margin: 5px;
+    background:linear-gradient(to right, rgb(2, 129, 2), rgb(67, 231, 75));
+    color:white;
+}
+
+@keyframes gearrounding {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+@keyframes imageking {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    25% {
+        transform: rotateY(360deg);
+    }
+
+    75% {
+        transform: rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}

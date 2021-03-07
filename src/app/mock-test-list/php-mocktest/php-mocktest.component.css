@@ -1,0 +1,101 @@
+.Mainbackground
+{
+    padding:20px;
+}
+.navbar
+{
+    background: linear-gradient(to right bottom,rgb(181, 107, 241),rgb(95, 8, 153));
+}
+
+.HeadingText
+{
+    font-family: 'Lobster',cursive;
+    color:rgb(235, 231, 231);
+
+}
+.TestBookContainer
+{
+    box-shadow: 0px 0px 35px rgb(139, 139, 139);
+    margin-top:4%;
+    margin-bottom:4%;
+}
+.TestBookColumn1
+{
+    text-align: center;
+}
+.TestBookColumn2
+{
+    text-align: left;
+}
+.TestBookColumn3
+{
+    text-align: center;
+}
+.nabvarbutton
+{
+    margin-right: 5%;
+}
+.TestbookStatus
+{
+    position: absolute;
+    top: 12%;
+    left: 20%;
+    height: 60vh;
+    width: 60%;
+    border:1px solid gray;
+    background-color: rgb(202, 201, 201);
+}
+.activebutton
+{
+    background-color: rgb(144, 191, 253);
+    color: rgb(22, 16, 99);
+
+}
+.containerbodytoptex
+{
+    text-align: center;
+    color:rgb(235, 231, 231);
+    background-color: rgb(7, 165, 7);
+}
+.submitbutton
+{
+    background-color: rgb(31, 83, 31);
+    color: white;
+    border:none;
+}
+.shortdetailsHeading
+{
+    font-weight: bold;
+}
+.shortdetails
+{
+  color:rgb(7, 6, 95);
+  text-align: justify;
+}
+.testname
+{
+    margin-top: 10px;
+    color: rgb(255, 0, 0);
+}
+.testmarks
+{
+    color:rgb(7, 6, 95);
+}
+.testquestion
+{
+    color:rgb(7, 6, 95);
+}
+.testtime
+{
+    color:rgb(7, 6, 95);
+}
+.notattempt
+{
+    color:rgb(255, 255, 255)
+}
+.Testbookbackground
+{
+    box-shadow: 0px 0px 45px rgb(165, 159, 159);
+    border-radius: 10px;
+    padding:0px 0px 0px 0px;
+}

@@ -1,0 +1,403 @@
+<!-- ------------------------------------------------------------------------------------- -->
+
+<app-admin-navbar></app-admin-navbar>
+<app-menubarlink></app-menubarlink>
+<app-sidebarlink></app-sidebarlink>
+
+<!-- ------------------------------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------------------------------- -->
+
+<div class="Mainbackground">
+
+    <!-- ----------------------------------------------------- -->
+    
+    <div class="container MainContainer FirstContainer" id="addnewtest">
+        <div class="row MainRow ">
+            <div class="offset-md-3 col-md-9 MainColumn">
+                  
+                <nav class="navbar">
+                      <h5>Add New Test</h5>
+                </nav>
+
+               <form [formGroup]="UploadQuestion" (ngSubmit)="GetUploadQuestion()">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-12 mt-2">
+                          <input type="text" class="form-control" formControlName="testbookname" required placeholder="Testbook Name"> 
+                        </div>
+                        
+                        <div class="col-md-4 mt-2">
+                            <select id="SelectValue" class="form-control custom-select" formControlName="testsubject" required>
+                                <option value="">Subject Name</option>
+                                <option *ngFor="let Print of SubjectNameDetails" value="{{Print.subject_name}}">{{Print.subject_name}}</option>
+                            </select>
+                        </div>
+                       
+                        <div class="col-md-4 mt-2">
+                            <select class="form-control custom-select" formControlName="testlevel" required>
+                                <option value="">Subject Level</option>
+                                <option value="Basic">Basic</option>
+                                <option value="Advance">Advance</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-4 mt-2">
+                            <select class="form-control custom-select" formControlName="lession" required>
+                                <option value="">Lession Name</option>
+                                <option *ngFor="let Print of SubjectDetails" value="{{Print.lessionname}}">{{Print.lessionname}}</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-12 mt-2">
+                            <input type="text" class="form-control" formControlName="questiondetails" required placeholder="Question Details"> 
+                        </div>
+
+                        <div class="col-md-6 mt-2">
+                            <input type="text" class="form-control" formControlName="option1" required placeholder="First Option"> 
+                        </div>
+
+                        <div class="col-md-6 mt-2">
+                            <input type="text" class="form-control" formControlName="option2" required placeholder="Second Option"> 
+                        </div>
+
+                        <div class="col-md-6 mt-2">
+                            <input type="text" class="form-control" formControlName="option3" required placeholder="Third Option"> 
+                        </div>
+
+                        <div class="col-md-6 mt-2">
+                            <input type="text" class="form-control" formControlName="option4" required placeholder="Fourth Option"> 
+                        </div>
+
+                        <div class="col-md-12 mt-2">
+                            <input type="text" class="form-control" formControlName="answer" required placeholder="Answer"> 
+                        </div>
+
+                        <div class="col-md-6 mt-2">
+                            <input type="reset" value="RESET" class="form-control btn btn-outline-light btn-sm" > 
+                        </div>
+                        <div class="col-md-6 mt-2">
+                            <input type="submit" [disabled]="UploadQuestion.invalid" value="UPLOAD" class="form-control btn btn-outline-light btn-sm" > 
+                        </div>
+
+                    </div>
+                </div>
+               </form>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- ----------------------------------------------------- -->
+    
+    <div class="container MainContainer SecondContainer" id="testdetails">
+        <div class="row MainRow ">
+            <div class="offset-md-3 col-md-9 MainColumn">
+                  
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1>Test Details</h1>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- ----------------------------------------------------- -->
+    
+    <div class="container MainContainer ThirdContainer" id="modifytest">
+        <div class="row MainRow ">
+            <div class="offset-md-3 col-md-9 MainColumn">
+                  
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1>Modify Test</h1>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- ----------------------------------------------------- -->
+    
+    <div class="container MainContainer FourthContainer" id="removetest">
+        <div class="row MainRow ">
+            <div class="offset-md-3 col-md-9 MainColumn">
+                  
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1>Remove Test</h1>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- ----------------------------------------------------- -->
+    
+    <div class="container MainContainer FifthContainer" id="attemptedtest">
+        <div class="row MainRow ">
+            <div class="offset-md-3 col-md-9 MainColumn">
+               
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1>Attempted Test</h1>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+   
+    <!-- ----------------------------------------------------- -->
+<!-- ------------------------------------------------------------------------------------- -->
+<!-- Test Category -->
+    <!-- ----------------------------------------------------- -->
+    
+    <div class="container MainContainer SixthContainer" id="testcategory">
+        <div class="row MainRow ">
+            <div class="offset-md-3 col-md-9 MainColumn">
+                
+                <nav class="navbar">
+                    <h5>Test Series Details</h5>
+                </nav>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <table class="table table-striped bg-light">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Subject Name</th>
+                                    <th scope="col">Subject Lavel</th>
+                                    <th scope="col">Lession Name</th>
+                                    <th scope="col" class="d-none">Upload Details</th>
+                                    <th scope="col" class="d-none">Update Details</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr *ngFor="let Print of SubjectDetails">
+                                    <th scope="row">{{Print.id}}</th>
+                                    <td>{{Print.subjectname}}</td>
+                                    <td>{{Print.subjectlevel}}</td>
+                                    <td>{{Print.lessionname}}</td>
+                                    <td class="d-none">{{Print.uploadtime}}</td>
+                                    <td class="d-none">{{Print.updatetime}}</td>
+                                  </tr>
+                                 
+                                </tbody>
+                              </table>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+   
+    <!-- ----------------------------------------------------- -->
+    <!-- ----------------------------------------------------- -->
+    
+    <div class="container MainContainer SeventhContainer" id="addcategory">
+        <div class="row MainRow ">
+            <div class="offset-md-3 col-md-9 MainColumn">
+               
+                <nav class="navbar">
+                    <h5>Add Test Series</h5>
+                </nav>
+
+                <form [formGroup]="UploadSubject" (ngSubmit)="UploadSubDetails()">
+
+                    <div class="container">
+                        <div class="row justify-content-center mt-5">
+                           
+                            <div class="col-md-8 mt-2">
+
+                               <input type="text" formControlName="subjectname" class="form-control" placeholder="Subject Name" required>
+                              
+                               <p *ngIf="ErrorsMessages" class="ErrorMessages"><span>{{ErrorsMessages.subjectname}}</span></p>
+
+                            </div>
+
+                            <div class="col-md-8 mt-2">
+
+                               <select id="" class="form-control" formControlName="subjectlevel" required>
+                                   <option  value="">Subject Level</option>
+                                   <option  value="Basic">Basic</option>
+                                   <option  value="Advance">Advance</option>
+                               </select>
+                                <p *ngIf="ErrorsMessages" class="ErrorMessages"><span>{{ErrorsMessages.subjectlevel}}</span></p>
+                            </div>
+
+                            <div class="col-md-8 mt-2">
+
+                               <input type="text" class="form-control" formControlName="lessionname" placeholder="Lession Name" required>
+                             
+                               <p *ngIf="ErrorsMessages" class="ErrorMessages"><span>{{ErrorsMessages.lessionname}}</span></p>
+
+                            </div>
+
+                            <div class="col-md-8 mt-2">
+
+                               <button type="submit" [disabled]="UploadSubject.invalid"  class="form-control btn btn-dark btn-sm">UPLOAD</button>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+
+                <div *ngIf="SuccessMessage" class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <br><br><br><br>
+                            <input disabled type="text" class="form-control SuccessMessage" value="{{SuccessMessage}}">
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+   
+    <!-- ----------------------------------------------------- -->
+    <!-- ----------------------------------------------------- -->
+    
+    <div class="container MainContainer EighthContainer" id="editcategory">
+        <div class="row MainRow ">
+            <div class="offset-md-3 col-md-9 MainColumn">
+               
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1>Edit Test Category</h1>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+   
+    <!-- ----------------------------------------------------- -->
+    <!-- ----------------------------------------------------- -->
+    
+    <div class="container MainContainer EightContainerA" id="addnewsubject">
+        <div class="row MainRow ">
+            <div class="offset-md-3 col-md-9 MainColumn">
+
+                <nav class="navbar">
+                    <h5>Add New Subject</h5>
+                </nav>
+
+            <form  [formGroup]="UploadTestBook" (ngSubmit)="UploadTestBookFunction()">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8 my-2">
+                           <input type="text" class="form-control" required formControlName="subject_name" placeholder="Tesbook Name">
+                        </div>
+
+                        <div class="col-md-8">
+                            <button type="submit" [disabled]="UploadTestBook.invalid"  class="form-control btn btn-dark btn-sm my-2">UPLOAD</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+                <!-- Notification -->
+
+                <div  class="container mt-5">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <input *ngIf="TBSuccessResult" disabled type="button" class="form-control" style="color:green" value="Subject upload successfully.">
+                            <input *ngIf="TBErrorsResult" disabled type="button" class="form-control" style="color:red" value="{{TBErrorsResult.subject_name}}">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pring Subject Details ----------------------------------------------------- -->
+                <nav class="navbar">
+                    <h5>Subject Details</h5>
+                </nav>
+                
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <table class="table table-striped bg-light">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Subject Name</th>
+                                    <!-- <th scope="col">Upload Details</th>
+                                    <th scope="col">Update Details</th> -->
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let Print of SubjectNameDetails">
+                                        <th scope="row">{{Print.id}}</th>
+                                        <td>{{Print.subject_name}}</td>
+                                        <!-- <td>{{Print.uploadtime}}</td>
+                                        <td>{{Print.updatetime}}</td> -->
+                                      </tr>
+                                 
+                                </tbody>
+                              </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ----------------------------------------------------- -->
+                
+            </div>
+        </div>
+    </div>
+   
+    <!-- ----------------------------------------------------- -->
+    <!-- ----------------------------------------------------- -->
+    
+    <div class="container MainContainer NinethContainer" id="removecategory">
+        <div class="row MainRow ">
+            <div class="offset-md-3 col-md-9 MainColumn">
+               
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1>Remove Category</h1>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+   
+    <!-- ----------------------------------------------------- -->
+    
+   
+
+</div>
+
+<!-- ------------------------------------------------------------------------------------- -->

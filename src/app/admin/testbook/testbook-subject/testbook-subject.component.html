@@ -1,0 +1,66 @@
+<!-- ------------------------------------------------------------------------------------- -->
+
+<app-testbook-navbar></app-testbook-navbar>
+<app-testbook-menubar></app-testbook-menubar>
+
+<!-- ------------------------------------------------------------------------------------- -->
+
+<div id="sidebar" class="sidebarbackground fixed-top ">
+
+
+</div>
+<!-- ----------------------------------------------------- -->
+<div class="sidebarshowhide fixed-top">
+  <i id="arrow" class="fa fa-arrow-circle-o-right sidebararrow"(click)="SidebarShowHide()" aria-hidden="true"></i>
+</div>
+<!-- ------------------------------------------------------------------------------------- -->
+
+<!-- ----------------------------------------------------- -->
+<div class="main-container">
+<!-- ----------------------------------------------------- -->
+    
+<div class="container FirstContainer" id="addnewtest">
+  <div class="row MainRow justify-content-center ">
+      <div class=" col-md-10 MainColumn">
+            
+        <nav class="navbar">
+            <h5>Add New Subject</h5>
+        </nav>
+
+    <form  [formGroup]="UploadTestBook" (ngSubmit)="UploadTestBookFunction()">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 my-2">
+                   <input type="text" class="form-control" required formControlName="subject_name" placeholder="Tesbook Name">
+                </div>
+
+                <div class="col-md-8">
+                    <button type="submit" [disabled]="UploadTestBook.invalid"  class="form-control btn btn-dark btn-sm my-2">UPLOAD</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+        <!-- Notification -->
+
+        <div  class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <input *ngIf="TBSuccessResult" disabled type="button" class="form-control" style="color:green" value="Subject upload successfully.">
+                    <input *ngIf="TBErrorsResult" disabled type="button" class="form-control" style="color:red" value="{{TBErrorsResult.subject_name}}">
+                </div>
+            </div>
+        </div>
+
+
+         
+        </div>
+    </div>
+</div>
+<!-- ----------------------------------------------------- -->
+</div>
+<!-- ----------------------------------------------------- -->
+
+
+
+<!-- ------------------------------------------------------------------------------------- -->

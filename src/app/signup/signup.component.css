@@ -1,0 +1,170 @@
+.firstslide
+{
+    width: 100%;
+    height: 70vh;
+  
+    
+}
+.secondslide
+{
+    width: 100%;
+    height: 70vh;
+  
+
+}
+
+.signupbackgroundmainpart
+{
+
+    border-radius: 20px;
+    margin: 10px 10px 10px 30px;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    background-image: url('src/assets/PPTIMAGE/solidring.jpg');
+    background-size: cover;
+    box-shadow: 0px 0px 10px rgb(151, 151, 151);
+}
+.heading
+{
+    border-bottom: 2px solid rgb(187, 187, 186);
+}
+.HeadingText
+{
+    font-family: 'Lobster',cursive ;
+    color:rgb(212, 98, 4);
+}
+.HeadingTextsmall
+{
+    font-family: 'Lobster',cursive;
+    color:rgb(6, 18, 189);
+}
+
+.ng-valid 
+{
+    border-bottom: 2px solid rgb(5, 207, 5);
+}
+.ErrorsResult
+{
+    color: red;
+    background-color: rgba(255, 255, 255, 0.788);
+}
+form
+{
+    border:none;
+}
+.nextbutton
+{
+    float: right;
+    width: 20%;
+    background: linear-gradient(to left bottom,rgb(129, 187, 241),rgb(16, 14, 138));
+}
+.backbutton
+{
+   float: left; 
+    width: 20%;
+    background: linear-gradient(to left bottom,rgb(94, 235, 117),rgb(4, 126, 10));
+}
+input , button
+{
+    margin-top: 10px;
+    width: 60%;
+    transition: 1s;
+    border-bottom: 1px solid rgb(182, 175, 175);
+}
+input:hover
+{
+    width: 100%;
+    border:1px solid rgb(30, 4, 177);
+}
+.signupbackground
+{
+    background-image: url('src/assets/PPTIMAGE/river.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+.pngiconbox
+{
+    border:none;
+}
+.pngiconbox img
+{
+    height: 60px;
+    width: 60%;
+    float: right;
+    animation: pngicon;
+    animation-duration: 15s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes pngicon {
+    0%
+    {
+       transform: rotateY(0deg);
+    }
+    25%
+    {
+        transform: rotateY(180deg);
+    }
+    50%
+    {
+        transform: rotateY(360deg);
+    }
+    75%
+    {
+        transform: rotateY(180deg);
+    }
+    100%
+    {
+        transform: rotateY(360deg);
+    }
+}
+
+.pngtickiconbox img
+{
+    height: 20vh;
+    width: 25%;
+    float: right;
+}
+
+
+@media only screen and (max-width : 1200px)
+{
+    
+}
+@media only screen and (max-width : 992px)
+{
+    .signupbackgroundmainpart,.firstslide,.secondslide
+    {
+        height: 90vh;
+    }
+}
+@media only screen and (max-width : 768px)
+{
+    .signupbackgroundmainpart,.firstslide,.secondslide
+    {
+        height: 90vh;
+    }
+}
+@media only screen and (max-width : 600px)
+{
+    .pngtickiconbox img
+{
+    height: 20vh;
+    width: 25%;
+    float: left;
+    margin-left: 40%;
+}
+.signupbackgroundmainpart,.firstslide,.secondslide
+{
+    height: 90vh;
+}
+   
+}
+@media only screen and (max-width : 375px)
+{
+
+}
