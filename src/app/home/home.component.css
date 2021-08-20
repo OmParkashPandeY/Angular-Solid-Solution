@@ -1,263 +1,251 @@
+/* ---------------------------------------------------------------------------- */
+.HomePageBackground {
+  width: 100%;
+  height: 100vh;
+  background-image: url("/assets/Image/desktopImage.jpg");
+  background-size: cover;
+}
 
 /* ---------------------------------------------------------------------------- */
-.HomePageBackground
-{
-    width: 100%;
-    height: 100vh;
+
+.learningtext {
+  position: absolute;
+  top: 12%;
+  color: white;
+  height: 100vh;
+  width: 100%;
 }
-.HomePageBackground #MainImage,#FirstImage,#SecondImage,#ThirdImage
-{
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0%;
-}
-#FirstImage
-{
-    animation: FirstImage; 
-    animation-duration: 30s;
-    animation-timing-function:ease-in;
-    animation-iteration-count:infinite;
-    animation-direction: alternate;
-}
-#SecondImage
-{
-    animation: SecondImage; 
-    animation-duration: 30s;
-    animation-timing-function:ease-in;
-    animation-iteration-count:infinite;
-    animation-direction: alternate;
-}
-#ThirdImage
-{
-    animation: ThirdImage; 
-    animation-duration: 30s;
-    animation-timing-function:ease-in;
-    animation-iteration-count:infinite;
-    animation-direction: alternate;
-}
-@keyframes FirstImage
-{
-    0%{ margin-top:  -100vh;}
-    20%{ margin-top: -100vh;}
-    40%{margin-top:     0vh;}
-    60%{margin-top:     0vh;}
-    80%{margin-top:     0vh;}
-    100%{margin-top:    0vh;}
-}
-@keyframes SecondImage
-{
-    0%{ margin-top:  -100vh;}
-    20%{ margin-top: -100vh;}
-    40%{margin-top:  -100vh;}
-    60%{margin-top:    00vh;}
-    80%{margin-top:    00vh;}
-    100%{margin-top:   00vh;}
-}
-@keyframes ThirdImage
-{
-    0%{ margin-top:  -100vh;}
-    20%{ margin-top: -100vh;}
-    40%{margin-top:  -100vh;}
-    60%{margin-top:  -100vh;}
-    80%{margin-top:    00vh;}
-    100%{margin-top:   00vh;}
+.learntextstyle {
+  padding: 10px;
+  background: linear-gradient(
+    To right,
+    rgba(29, 24, 24, 0.445),
+    rgba(255, 255, 255, 0)
+  );
+  font-family: "Concert One", cursive;
 }
 /* ---------------------------------------------------------------------------- */
-
-.learningtext
-{
-    position: absolute;
-    top: 12%;
-    height: 100vh;
-    width: 100%;
+.PngAnimation {
+  position: absolute;
+  background-color: rgba(13, 13, 14, 0.24);
+  top: 0px;
+  height: 100vh;
+  width: 100%;
 }
-.learntextstyle
-{
-    padding:10px;
-    background: linear-gradient(To right,rgba(255, 255, 255, 0.384), rgba(255, 255, 255, 0));
-    font-family: 'Concert One', cursive;
+#MouseImage {
+  position: absolute;
+  width: 20%;
+  height: auto;
+  animation: MouseAnimation;
+  animation-duration: 15s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
-/* ---------------------------------------------------------------------------- */
-.PngAnimation
-{
-    position: absolute;
-    background-color: rgba(13, 13, 14, 0.24);
-    top: 0px;
-    height: 100vh;
-    width: 100%;
-
-}
-#MouseImage
-{
-    position: absolute;
-    width: 20%;
-    height:auto;
-    animation: MouseAnimation;
-    animation-duration: 15s;
-    animation-timing-function: ease;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-@keyframes MouseAnimation
-{
-    0%{top:    60%;left:     60%;width:  00%;height: auto;transform: rotateY(30deg);}
-    50%{top:    60%;left:    50%;width:  00%;height: auto;}
-    75%{top:    60%;left:    50%;width:  15%;height: auto;}
-    100%{top:    60%;left:   30%;width: 20%;height: auto;}
-}
-#LaptopImage
-{
-    position: absolute;
+@keyframes MouseAnimation {
+  0% {
     top: 60%;
-    width: 25%;
-    height:auto;
-    animation: LaptopImage;
-    animation-duration: 20s;
-    animation-timing-function: ease;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-@keyframes LaptopImage
-{
-    0%{top:    35%;left:    6%;width:   0%;height: auto;}
-    50%{top:    35%;left:   6%;width:  30%;height: auto;}
-    75%{top:    35%;left:   6%;width:  30%;height: auto;}
-    100%{top:    35%;left:   6%;width: 30%;height: auto;transform: rotateX(30deg);}
-}
-/* ---------------------------------------------------------------------------- */
-.Navbar
-{
-    position: absolute;
-    top: 0%;
-    width: 100%;
-    background:linear-gradient(To right,rgb(1, 0, 49),rgba(0, 0, 0, 0.568));
-}
-/* ---------------------------------------------------------------------------- */
-.HeadingTextBig
-{
-    font-family: 'Lobster', cursive;
-    color:white;
-    
-}
-.HeadingTextSmall
-{
-    display: none;
-    color:white;
-    font-family: 'Lobster', cursive;
-}
-/* ---------------------------------------------------------------------------- */
-.LoginButton
-{
-    position: absolute;
-    top: 2%;
-    right:5%;
-    width:20%;
-    margin-bottom: 10px;
-}
-.LoginButton button
-{
-   width: 60%;
-   float: right;
-}
-.CursiveFont
-{
-    font-family: 'Lobster', cursive;
-}
-/* ---------------------------------------------------------------------------- */
-.SectionFirst
-{
-    width: 100%;
-    height: 100vh;
-}
-/* ---------------------------------------------------------------------------- */
-.ButtonContainer
-{
-    border-radius: 20px;
-    box-shadow: 0px 0px 35px rgb(160, 158, 158);
-    margin-top: 10%;
-    text-align: center;
-    padding: 20px;
-    background: linear-gradient(To right, rgb(173, 199, 211),rgb(255, 255, 255));
-   
-}
-.SolutionLinkButton
-{
-    width: 60%;
-    margin: 4px;
-    transition: 1s;
-    color: rgb(206, 84, 3);
-    border:1px solid rgb(184, 73, 0);
-    border-radius: 50px;
-}
-.SolutionLinkButton:hover
-{
-    background-color:rgb(184, 73, 0);
-    color:white
-}
-.ButtonContainer:hover
-{
-    box-shadow: 0px 0px 45px rgb(172, 168, 168);
-}
-/* ---------------------------------------------------------------------------- */
-.TopbuttonContainer
-{
-    position: absolute;
-    float: right;
-    top: 40%;
-    left: 70%;
+    left: 60%;
+    width: 00%;
+    height: auto;
+    transform: rotateY(30deg);
+  }
+  50% {
+    top: 60%;
+    left: 50%;
+    width: 00%;
+    height: auto;
+  }
+  75% {
+    top: 60%;
+    left: 50%;
+    width: 15%;
+    height: auto;
+  }
+  100% {
+    top: 60%;
+    left: 30%;
     width: 20%;
-    height: 30%;
+    height: auto;
+  }
 }
-.TopbuttonContainer div button
-{
-   
-    float: right;
-    width: 100%;
-    margin-top: 4px;
-    border-radius: 50px;
-    transition: 1s;
-    background: linear-gradient(To right,rgba(177, 223, 241, 0.623),rgba(255, 255, 255, 0.137));
-   border:2px solid rgb(255, 255, 255)
- 
+#LaptopImage {
+  position: absolute;
+  top: 60%;
+  width: 25%;
+  height: auto;
+  animation: LaptopImage;
+  animation-duration: 20s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
-.TopbuttonContainer div button:hover
-{
-    color:rgb(179, 65, 0);
-    background: linear-gradient(To right,rgb(255, 124, 1),rgb(255, 255, 255));
+@keyframes LaptopImage {
+  0% {
+    top: 35%;
+    left: 6%;
+    width: 0%;
+    height: auto;
+  }
+  50% {
+    top: 35%;
+    left: 6%;
+    width: 30%;
+    height: auto;
+  }
+  75% {
+    top: 35%;
+    left: 6%;
+    width: 30%;
+    height: auto;
+  }
+  100% {
+    top: 35%;
+    left: 6%;
+    width: 30%;
+    height: auto;
+    transform: rotateX(30deg);
+  }
 }
 /* ---------------------------------------------------------------------------- */
-@media only screen and (max-width: 1200px)
-{
-   
-} 
-@media only screen and (max-width: 992px)
-{
-    .SolutionLinkButton{width: 80%;}
-    .TopbuttonContainer{width: 30%;left: 50%;}
-    /* .SolutionLinkButton{font-size: 24px;}
-    .TopbuttonContainer div button{font-size: 24px;} */
-} 
-@media only screen and (max-width: 768px)
-{
-    .HeadingTextBig{display: none;}
-    .HeadingTextSmall{display: inline;}
-    .LoginButton button{width: 90%;}
-    .Navbar{padding-bottom: 10px;}
-    .SolutionLinkButton{width: 80%;}
-    .TopbuttonContainer{width: 60%;left: 30%;}
-    /* .SolutionLinkButton{font-size: 24px;} */
-    /* .TopbuttonContainer div button{font-size: 24px;font-weight: bold;} */
-} 
-@media only screen and (max-width: 600px)
-{
-    .HeadingTextBig{display: none;}
-    .HeadingTextSmall{display: inline;}
-    .LoginButton button{width: 90%;}
-    .Navbar{padding-bottom: 10px;}
-    .SolutionLinkButton{width: 80%;}
-    .TopbuttonContainer{width: 60%;left: 30%;}
-    /* .SolutionLinkButton{font-size: 24px;} */
-    /* .TopbuttonContainer div button{font-size: 24px;font-weight: bold;} */
-} 
+.Navbar {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  background: linear-gradient(To right, rgb(1, 0, 49), rgba(0, 0, 0, 0.568));
+}
+/* ---------------------------------------------------------------------------- */
+.HeadingTextBig {
+  font-family: "Lobster", cursive;
+  color: white;
+}
+.HeadingTextSmall {
+  display: none;
+  color: white;
+  font-family: "Lobster", cursive;
+}
+/* ---------------------------------------------------------------------------- */
+.LoginButton {
+  position: absolute;
+  top: 2%;
+  right: 5%;
+  width: 20%;
+  margin-bottom: 10px;
+}
+.LoginButton button {
+  width: 60%;
+  float: right;
+}
+.CursiveFont {
+  font-family: "Lobster", cursive;
+}
 
+/* ---------------------------------------------------------------------------- */
+.ButtonContainer {
+  border-radius: 20px;
+  box-shadow: 0px 0px 35px rgb(160, 158, 158);
+  margin-top: 10%;
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(To right, rgb(173, 199, 211), rgb(255, 255, 255));
+}
+.SolutionLinkButton {
+  width: 60%;
+  margin: 4px;
+  transition: 1s;
+  color: rgb(206, 84, 3);
+  border: 1px solid rgb(184, 73, 0);
+  border-radius: 50px;
+}
+.SolutionLinkButton:hover {
+  background-color: rgb(184, 73, 0);
+  color: white;
+}
+.ButtonContainer:hover {
+  box-shadow: 0px 0px 45px rgb(172, 168, 168);
+}
+/* ---------------------------------------------------------------------------- */
+.TopbuttonContainer {
+  position: absolute;
+  float: right;
+  top: 50%;
+  left: 70%;
+  width: 20%;
+  height: 30%;
+}
+.TopbuttonContainer div button {
+  float: right;
+  width: 100%;
+  margin-top: 4px;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: 1s;
+  background: linear-gradient(
+    To right,
+    rgba(177, 223, 241, 0.623),
+    rgba(255, 255, 255, 0.137)
+  );
+  border: 2px solid rgb(255, 255, 255);
+}
+.TopbuttonContainer div button:hover {
+  color: rgb(179, 65, 0);
+  background: linear-gradient(To right, rgb(255, 124, 1), rgb(255, 255, 255));
+}
+/* ---------------------------------------------------------------------------- */
+@media only screen and (max-width: 1200px) {
+}
+@media only screen and (max-width: 992px) {
+  .SolutionLinkButton {
+    width: 80%;
+  }
+  .TopbuttonContainer {
+    width: 30%;
+    left: 50%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .HeadingTextBig {
+    display: none;
+  }
+  .HeadingTextSmall {
+    display: inline;
+  }
+  .LoginButton button {
+    width: 90%;
+  }
+  .Navbar {
+    padding-bottom: 10px;
+  }
+  .SolutionLinkButton {
+    width: 80%;
+  }
+  .TopbuttonContainer {
+    width: 60%;
+    left: 30%;
+  }
+  /* .SolutionLinkButton{font-size: 24px;} */
+  /* .TopbuttonContainer div button{font-size: 24px;font-weight: bold;} */
+}
+@media only screen and (max-width: 600px) {
+  .HeadingTextBig {
+    display: none;
+  }
+  .HeadingTextSmall {
+    display: inline;
+  }
+  .LoginButton button {
+    width: 90%;
+  }
+  .Navbar {
+    padding-bottom: 10px;
+  }
+  .SolutionLinkButton {
+    width: 80%;
+  }
+  .TopbuttonContainer {
+    width: 60%;
+    left: 30%;
+  }
+  /* .SolutionLinkButton{font-size: 24px;} */
+  /* .TopbuttonContainer div button{font-size: 24px;font-weight: bold;} */
+}

@@ -13,39 +13,39 @@ import { UsersComponent } from './users/users.component';
 // ------------------------------------------------------------------------------------------
 
 const routes: Routes = [
-     {
-       path :'',
-       redirectTo :'/admin',
-       pathMatch :'full',
-     },
-     {
-       path :'template',
-       component:TemplateComponent
-     },
-     {
-       path :'home',
-       component:HomeComponent
-     },
-     {
-       path : 'admin',
-       component:AdminComponent,
-     },
-     {
-       path : 'users',
-       component:UsersComponent,
-     },
-     {
-       path : 'signup',
-       component:SignupComponent
-     },
-     {
-       path : 'login',
-       component:LoginComponent
-     },
-     {
-       path : 'mock-test-list',
-       component:MockTestListComponent
-     },
+  {
+    path: '',
+    redirectTo: '/template',
+    pathMatch: 'full',
+  },
+  {
+    path: 'template',
+    component: TemplateComponent
+  },
+  {
+    path: 'home',
+    component: HomeComponent
+  },
+  {
+    path: 'admin',
+    component: AdminComponent,
+  },
+  {
+    path: 'users',
+    component: UsersComponent,
+  },
+  {
+    path: 'signup',
+    component: SignupComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'mock-test-list',
+    component: MockTestListComponent
+  },
 
 ];
 

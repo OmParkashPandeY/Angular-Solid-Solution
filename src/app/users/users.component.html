@@ -1,26 +1,188 @@
-<div data-aos="fade-up"
-     data-aos-easing="linear"
-     data-aos-duration="1500"  class="FirstContainer">
-    
-     Hello Aos Animation
+<app-navbar></app-navbar>
+<!-- ------------------------------------------------------------------------------------------- -->
+
+<div class="row m-5">
+     <table class="table table-striped">
+          <thead>
+               <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Website</th>
+
+               </tr>
+
+          </thead>
+          <tbody>
+               <tr *ngFor="let print of ArrayOfNodeUsersDetails.Details">
+                    <th>{{print.id}}</th>
+                    <td>{{print.name}}</td>
+                    <td>{{print.username}}</td>
+                    <td>{{print.phone}}</td>
+                    <td>{{print.website}}</td>
+
+
+               </tr>
+
+          </tbody>
+     </table>
 </div>
-<div data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500"  class="SecondContainer">
-    
-     Hello Aos Animation
+<!-- ------------------------------------------------------------------------------------------- -->
+
+<div class="row m-5">
+     <table class="table table-striped">
+          <thead>
+               <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Website</th>
+                    <th scope="col">Company</th>
+                    <th scope="col">Address</th>
+               </tr>
+
+          </thead>
+          <tbody>
+               <tr *ngFor="let print of ArrayOfUsers">
+                    <th scope="row">{{print.id}}</th>
+                    <td>{{print.name}}</td>
+                    <td>{{print.username}}</td>
+                    <td>{{print.email}}</td>
+                    <td>{{print.phone}}</td>
+                    <td>{{print.website}}</td>
+                    <td>{{print.company.name}}</td>
+                    <td>{{print.address.street}}</td>
+               </tr>
+
+          </tbody>
+     </table>
 </div>
-<div data-aos="fade-right"
-     data-aos-easing="linear"
-     data-aos-duration="1500"  class="ThirdContainer">
-    
-     Hello Aos Animation
+<!-- ------------------------------------------------------------------------------------------- -->
+
+<div class="row m-5">
+     <table class="table table-striped">
+          <thead>
+               <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Path</th>
+
+               </tr>
+
+          </thead>
+          <tbody>
+               <tr *ngFor="let print of ArrayOfCovidDetails">
+                    <th scope="row">1</th>
+                    <td>
+                         {{print.countriesRoute.Name}}
+                         <br>
+                         <br>
+                         {{print.countryDayOneRoute.Name}}
+                         <br>
+                         <br>
+                         {{print.countryDayOneTotalRoute.Name}}
+                    </td>
+                    <td>
+                         {{print.countriesRoute.Description}}
+                         <br>
+                         <br>
+                         {{print.countryDayOneRoute.Description}}
+                         <br>
+                         <br>
+                         {{print.countryDayOneTotalRoute.Description}}
+                    </td>
+                    <td>
+                         {{print.countriesRoute.Path}}
+                         <br>
+                         <br>
+                         {{print.countryDayOneRoute.Path}}
+                         <br>
+                         <br>
+                         {{print.countryDayOneTotalRoute.Path}}
+                    </td>
+
+               </tr>
+
+          </tbody>
+     </table>
 </div>
-<div data-aos="fade-up"
-     data-aos-easing="linear"
-     data-aos-duration="1500"  class="FourthContainer">
-    
-     Hello Aos Animation
+<!-- ------------------------------------------------------------------------------------------- -->
+<div class="row m-5 ">
+     <div class="col-md-12 ">
+          <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500"
+               class="FirstContainer card bg-light">
+
+               Hello Aos Animation
+          </div>
+     </div>
+     <div class="col-md-12">
+          <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500"
+               class="SecondContainer card bg-light">
+
+               Hello Aos Animation
+          </div>
+     </div>
+     <div class="col-md-12">
+          <div data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500"
+               class="ThirdContainer card bg-light">
+
+               Hello Aos Animation
+          </div>
+     </div>
+     <div class="col-md-12">
+          <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500"
+               class="FourthContainer card bg-light">
+
+               Hello Aos Animation
+          </div>
+     </div>
 </div>
+<!-- -------------------------------------------------------------------------------- -->
+
+<div class="m-2">
+     <div class="row">
+          <div class="col-sm-6">
+               <div class="card">
+                    <div class="card-body">
+                         <h5 class="card-title">Special title treatment</h5>
+                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                         <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+               </div>
+          </div>
+          <div class="col-sm-6">
+               <div class="card">
+                    <div class="card-body">
+                         <h5 class="card-title">Special title treatment</h5>
+                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                         <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+               </div>
+          </div>
+     </div>
+</div>
+<!-- -------------------------------------------------------------------------------- -->
+<div style="height: 20vh;"></div>
+
+<!-- -------------------------------------------------------------------------------- -->
+<div style="height: 50vh;background-color: rgba(0, 0, 0, 0.747);">
+     <footer>
+          <h1 style="color: white;" class="pl-2">
+               Solid Solution with Me
+          </h1>
+          <span class="pl-2" style="color: white;">solidsolution@gmail.com</span>
+          <br>
+          <span class="pl-2" style="color: white;">Contact :- 06294678812</span>
+     </footer>
+     <div class="m-2">
+          <button class="btn btn-light pl-5 pr-5" routerLink="../home"><span style="font-weight: bold;">Home
+               </span></button>
+     </div>
+</div>
+<!-- -------------------------------------------------------------------------------- -->
 
 <!-- <span data-aos="fade-up"  data-aos-easing="linear" data-aos-duration="1500">Hello World</span> -->

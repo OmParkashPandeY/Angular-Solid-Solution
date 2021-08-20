@@ -12,6 +12,7 @@ import { SignupModule } from './signup/signup.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminModule } from './admin/admin.module';
 import { MockTestListModule } from './mock-test-list/mock-test-list.module';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { MockTestListModule } from './mock-test-list/mock-test-list.module';
     HomeComponent,
     UsersComponent,
     TemplateComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,9 +32,9 @@ import { MockTestListModule } from './mock-test-list/mock-test-list.module';
     HttpClientModule,
     AdminModule,
     MockTestListModule,
-    
-    
-    
+
+
+
 
   ],
   providers: [],
