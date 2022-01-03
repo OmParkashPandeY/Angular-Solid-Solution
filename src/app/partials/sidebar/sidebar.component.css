@@ -1,0 +1,42 @@
+.sidebar{
+    width: 60px; 
+    padding-top: 90px; 
+    position: fixed;
+    top: 0px;
+    bottom:0px;
+    z-index: -1;
+    background-color:  rgb(73, 3, 100);
+    text-align: center;
+
+}
+
+.sidebar-icon{
+    font-size: 32px; 
+    color: rgb(206, 205, 205); 
+    cursor: pointer;
+}
+
+.dashboard-menu{
+    position: fixed;
+    top: 0px;
+    bottom:0px;
+    overflow: auto;
+    width: 340px;
+    z-index: -2;
+    margin-left: -340px;
+    transition-duration: 500ms;
+    padding-left: 62px;
+    padding-top: 70px;
+}
+.whatsapp-menu{
+    position: fixed;
+    top: 0px;
+    bottom:0px;
+    overflow: auto;
+    width: 340px;
+    z-index: -2;
+    margin-left: -340px;
+    transition-duration: 500ms;
+    padding-left: 62px;
+    padding-top: 70px;
+}

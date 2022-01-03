@@ -1,0 +1,86 @@
+<br>
+
+<div class="container angular-pipe">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Angular Pipe</h3>
+        </div>
+        <div class="col-md-6">
+            <pre class="card bg-dark">
+                <h6 class="py-3" style="color: rgb(224, 219, 219);">
+               {{usersDetails | json }}
+            </h6>
+        </pre>
+            <h6 class="py-3" style="text-align: left;">{{usersDetails }}</h6>
+
+        </div>
+        <div class="col-md-6">
+            <h6 class="py-3">{{webTitle}}</h6>
+            <h6 class="py-3">{{webTitle | uppercase}}</h6>
+            <h6 class="py-3">{{webTitle | lowercase}}</h6>
+
+            <h6 class="py-3">{{curruntDate}}</h6>
+            <h6 class="py-3">{{curruntDate | date}}</h6>
+            <h6 class="py-3">{{curruntDate | date | uppercase}}</h6>
+            <h6 class="py-3">{{curruntDate | date | lowercase}}</h6>
+            <h6 class="py-3">{{curruntDate | date : 'fullDate'}}</h6>
+
+            <h6 class="py-3">{{authorName }}</h6>
+            <h6 class="py-3">{{authorName | slice : 2 }}</h6>
+            <h6 class="py-3">{{authorName | slice : 2 : 5 }}</h6>
+
+        </div>
+        <div class="col-md-6">
+            <div class="col-md-12 p-2">
+                <div class="card p-2 shadow">
+                    <p>{{shortNote}}</p>
+                </div>
+            </div>
+            <div class="col-md-12 p-2">
+                <div class="card p-2 shadow">
+                    <p>{{shortNote|uppercase}}</p>
+                </div>
+            </div>
+            <div class="col-md-12 p-2">
+                <div class="card p-2 shadow">
+                    <p>{{shortNote|lowercase}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+
+
+            <h6 class="py-3">{{100 | currency }}</h6>
+            <h6 class="py-3">{{100 | currency: 'GBP' }}</h6>
+            <h6 class="py-3">{{100 | currency: 'USD' }}</h6>
+            <h6 class="py-3">{{100 | currency: 'INR' }}</h6>
+
+            <!-- This pipe is work with on dot symbol. which value before dot it print and excepting other value it remove as well as also after dot.   -->
+
+            <h6 class="py-3">{{0000502999.88000 | number : '2.2' }}</h6>
+
+            <!-- This pipe is work with on dot symbol. which value before dot it print that digit and excepting other value it remove as well as also after dot and if after dot two value exist with hiphen symbol it print that digit after between given value.   -->
+            <h6 class="py-3">{{0000502999.88555566666 | number : '2.2-5' }}</h6>
+
+
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 p-5">
+            <div class="card py-5">
+                <h4>
+                    {{25 | squireRoot : '5'}}
+                </h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<br><br><br>

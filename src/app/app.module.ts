@@ -13,6 +13,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { AdminModule } from './admin/admin.module';
 import { MockTestListModule } from './mock-test-list/mock-test-list.module';
 import { NavbarComponent } from './navbar/navbar.component';
+import { EditUsersComponent } from './users/edit-users/edit-users.component';
+import { AngularEventComponent } from './angular-event/angular-event.component';
+import { SidebarComponent } from './partials/sidebar/sidebar.component';
+import { MyNavbarComponent } from './partials/my-navbar/my-navbar.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AngularDirectiveComponent } from './angular-directive/angular-directive.component';
+import { AngularPipeComponent } from './angular-pipe/angular-pipe.component';
+import { SquireRootPipe } from './angular-pipe/custom-pipe/squire-root.pipe';
+import { SweetTitleDirective } from './angular-directive/custom-directive/sweet-title.directive';
 
 @NgModule({
   declarations: [
@@ -21,6 +30,15 @@ import { NavbarComponent } from './navbar/navbar.component';
     UsersComponent,
     TemplateComponent,
     NavbarComponent,
+    EditUsersComponent,
+    AngularEventComponent,
+    SidebarComponent,
+    MyNavbarComponent,
+    DashboardComponent,
+    AngularDirectiveComponent,
+    AngularPipeComponent,
+    SquireRootPipe,
+    SweetTitleDirective,
   ],
   imports: [
     BrowserModule,

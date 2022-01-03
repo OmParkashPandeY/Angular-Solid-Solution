@@ -7,14 +7,11 @@ import { HttpClient } from '@angular/common/http';
 export class ApiMessengerService {
 
   URL = "http://localhost/StrongFacts/public/index.php/StrongFacts/transaction";
-
   LOGINURL = "http://localhost/StrongFacts/public/index.php/StrongFacts/Login";
-
   UsersDetails = "https://jsonplaceholder.typicode.com/users";
-
   GetAllCovidDetails = "https://api.covid19api.com/";
+  GetAllNodeFileUsers = "http://localhost:9000/node/local/users/";
 
-  GetAllNodeFileUsers = "http://localhost:9000/node/local/users";
 
   constructor(private HTTP: HttpClient) {
 
@@ -48,6 +45,12 @@ export class ApiMessengerService {
 
   GetAllNodeFileUsersDetails() {
     return this.HTTP.get(this.GetAllNodeFileUsers);
+  }
+
+  // ----------------------------------------------------
+
+  DeleteNodeFileUsersDetails(DeleteId: any) {
+    return this.HTTP.delete(this.GetAllNodeFileUsers + DeleteId);
   }
 
   // --------------------------------------------------

@@ -52,4 +52,13 @@ export class UsersComponent implements OnInit {
 
   }
   //----------------------------------------------------------
+  DelteResponse: any = [];
+  deleteNodeUsersDetails(DelteId: any) {
+    this.ServiceObject.DeleteNodeFileUsersDetails(DelteId).subscribe((Result) => {
+      this.DelteResponse = Result;
+      console.warn(this.DelteResponse);
+    });
+
+  }
+  //----------------------------------------------------------
 }

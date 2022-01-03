@@ -52,12 +52,12 @@ body
     width: 10%;
     transition: 1s;
 }
-.cssbuttonlogin:hover
+/* .cssbuttonlogin:hover
 {
     padding: 2px 50px 2px 50px;
     background-color: rgb(245, 145, 87);
     color:white;
-}
+} */
 .logintex
 {
     font-family: 'Lobster', cursive;

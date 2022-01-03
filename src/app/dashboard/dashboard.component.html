@@ -1,0 +1,8 @@
+<app-my-navbar (showHideSideBar)="showHideSidebar()"></app-my-navbar>
+
+<div class="sidebar-background" id="sidebarBackground">
+    <app-sidebar></app-sidebar>
+</div>
+<div class="my-section" (window:resize)="screenResizeEventListner($event)">
+    <router-outlet></router-outlet>
+</div>

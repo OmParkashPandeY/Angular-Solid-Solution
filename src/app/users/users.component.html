@@ -10,6 +10,7 @@
                     <th scope="col">Username</th>
                     <th scope="col">Phone</th>
                     <th scope="col">Website</th>
+                    <th scope="col" colspan="2" style="text-align: center;">Action</th>
 
                </tr>
 
@@ -21,8 +22,19 @@
                     <td>{{print.username}}</td>
                     <td>{{print.phone}}</td>
                     <td>{{print.website}}</td>
-
-
+                    <td>
+                         <button routerLink="../users/edit/{{print.id}}" class="btn btn-success">
+                              <span class="m-4">
+                                   Edit
+                              </span>
+                         </button>
+                    </td>
+                    <td><button (click)="deleteNodeUsersDetails(print.id)" class="btn btn-danger">
+                              <span class="m-4">
+                                   Delete
+                              </span>
+                         </button>
+                    </td>
                </tr>
 
           </tbody>

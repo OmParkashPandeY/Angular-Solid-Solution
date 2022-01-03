@@ -1,0 +1,294 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>{{pageTitle}}</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input type="text" placeholder="This is Two Way Binding"
+                            [(ngModel)]="pageTitle" class="form-control">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input type="text" #inputName placeholder="This input Event"
+                            (input)="inputEventFunction(inputName.value)" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 d-flex justify-content-end">
+                    <div class="form-group">
+                        <button class="btn btn-light btn-md px-3">Click Me</button>
+                    </div>
+                </div>
+            </div>
+            <!-- <span *ngIf="isActiveCondition">
+                <div class="col-md-12 d-flex justify-content-center m-2">
+                    <button class="btn btn-light btn-md px-4">Block Title Working</button>
+                </div>
+            </span> -->
+
+            <!-- <span *ngIf="isActiveCondition">
+                <div class="col-md-12 d-flex justify-content-center m-2">
+                    <button class="btn btn-light btn-md px-4">Block Title Working</button>
+                </div>
+            </span>
+        
+            <span *ngIf="isActiveCondition;  else sectionB ">
+                <div class="col-md-12 d-flex justify-content-center m-2">
+                    <button class="btn btn-light btn-md px-4">Block A Working</button>
+                </div>
+            </span>
+        
+            <ng-template #sectionB>
+                <div class="col-md-12 d-flex justify-content-center m-2">
+                    <button class="btn btn-light btn-md px-4">Block B Working</button>
+                </div>
+            </ng-template> -->
+
+            <!-- <span *ngIf="isActiveCondition; then sectionC else sectionD"></span> -->
+            <!-- 
+            <ng-template #sectionC>
+                <div class="col-md-12 d-flex justify-content-center m-2">
+                    <button class="btn btn-light btn-md px-4">Block C Working</button>
+                </div>
+            </ng-template>
+        
+            <ng-template #sectionD>
+                <div class="col-md-12 d-flex justify-content-center m-2">
+                    <button class="btn btn-light btn-md px-4">Block D Working</button>
+                </div>
+            </ng-template> -->
+
+            <div class="row">
+                <!-- <ng-template [ngIf]="isActiveCondition">
+                    <div class="col-md-12">
+                        <h1 [style.backgroundColor]="isActiveCondition ? 'Orange':'Brown'">Hello Red
+                        </h1>
+                    </div>
+                </ng-template>
+        
+                <div class="col-md-12">
+                    <h1 [style.backgroundColor]="isActiveCondition ? 'Red':'Grey'">Hello Red
+                    </h1>
+        
+                </div> -->
+
+                <!-- <div class="col-md-12">
+                    <h1 [style.color]="'Red'">Hello Red</h1>
+                    <h1 [style.color]="'Yellow'">Hello Yellow</h1>
+                    <h1 [style.color]="'Green'">Hello Green</h1>
+                    <h1 [style.color]="'Pink'">Hello Pink</h1>
+                    <h1 [style.color]="'Purple'">Hello Purple</h1>
+                    <h1 [style.color]="'Blue'">Hello Blue</h1>
+                </div>
+                <div class="col-md-12">
+                    <h1 [style.backgroundColor]="'Red'">Hello Red</h1>
+                    <h1 [style.backgroundColor]="'Yellow'">Hello Yellow</h1>
+                    <h1 [style.backgroundColor]="'Green'">Hello Green</h1>
+                    <h1 [style.backgroundColor]="'Pink'">Hello Pink</h1>
+                    <h1 [style.backgroundColor]="'Purple'">Hello Purple</h1>
+                    <h1 [style.backgroundColor]="'Blue'">Hello Blue</h1>
+                </div> -->
+            </div>
+
+            <div class="row my-4">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input type="text" class="form-control" #dayName>
+                    </div>
+                </div>
+                <div class="col-md-12 d-flex justify-content-end">
+                    <button class="btn btn-warning btn-md px-3"
+                        (click)="getAndSetCurruntDay(dayName.value)">Send Day</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="row my-4 justify-content-center">
+                <div class="col-md-12 p-2">
+                    <ng-container [ngSwitch]="curruntDay">
+                        <div *ngSwitchCase="'Sunday'" class="card p-2">
+                            <h4>Sunday</h4>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam laudantium
+                            rem
+                            corporis sapiente, iure id itaque similique eum modi unde rerum illo
+                            magni,
+                            magnam quas.
+                        </div>
+                        <div *ngSwitchCase="'Monday'" class="card p-2">
+                            <h4>Monday</h4>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam laudantium
+                            rem
+                            corporis sapiente, iure id itaque similique eum modi unde rerum illo
+                            magni,
+                            magnam quas.
+                        </div>
+                        <div *ngSwitchCase="'Tuesday'" class="card p-2">
+                            <h4>Tuesday</h4>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam laudantium
+                            rem
+                            corporis sapiente, iure id itaque similique eum modi unde rerum illo
+                            magni,
+                            magnam quas.
+                        </div>
+                        <div *ngSwitchCase="'Wednesday'" class="card p-2">
+                            <h4>Wednesday</h4>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam laudantium
+                            rem
+                            corporis sapiente, iure id itaque similique eum modi unde rerum illo
+                            magni,
+                            magnam quas.
+                        </div>
+                        <div *ngSwitchCase="'Thursday'" class="card p-2">
+                            <h4>Thursday</h4>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam laudantium
+                            rem
+                            corporis sapiente, iure id itaque similique eum modi unde rerum illo
+                            magni,
+                            magnam quas.
+                        </div>
+                        <div *ngSwitchCase="'Friday'" class="card p-2">
+                            <h4>Friday</h4>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam laudantium
+                            rem
+                            corporis sapiente, iure id itaque similique eum modi unde rerum illo
+                            magni,
+                            magnam quas.
+                        </div>
+                        <div *ngSwitchCase="'Saturday'" class="card p-2">
+                            <h4>Saturday</h4>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam laudantium
+                            rem
+                            corporis sapiente, iure id itaque similique eum modi unde rerum illo
+                            magni,
+                            magnam quas.
+                        </div>
+                        <div *ngSwitchDefault class="card p-2">
+                            <h4>Unknown Day</h4>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam laudantium
+                            rem
+                            corporis sapiente, iure id itaque similique eum modi unde rerum illo
+                            magni,
+                            magnam quas.
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-2">
+            <div class="card shadow p-1">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea quo iste
+                nulla
+                veniam, sit, ipsam vitae eligendi nostrum tempore quos praesentium
+                blanditiis
+                sapiente hic accusantium ipsa vel magni delectus incidunt unde fugit,
+                facere
+                debitis molestias adipisci? Commodi, fugit quae ut consequatur
+                blanditiis
+                unde
+                expedita alias ad perferendis, velit placeat ipsam.
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-2">
+            <div class="card shadow p-1">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea quo iste
+                nulla
+                veniam, sit, ipsam vitae eligendi nostrum tempore quos praesentium
+                blanditiis
+                sapiente hic accusantium ipsa vel magni delectus incidunt unde fugit,
+                facere
+                debitis molestias adipisci? Commodi, fugit quae ut consequatur
+                blanditiis
+                unde
+                expedita alias ad perferendis, velit placeat ipsam.
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-2">
+            <div class="card shadow p-1">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea quo iste
+                nulla
+                veniam, sit, ipsam vitae eligendi nostrum tempore quos praesentium
+                blanditiis
+                sapiente hic accusantium ipsa vel magni delectus incidunt unde fugit,
+                facere
+                debitis molestias adipisci? Commodi, fugit quae ut consequatur
+                blanditiis
+                unde
+                expedita alias ad perferendis, velit placeat ipsam.
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-2">
+            <div class="card shadow p-1">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea quo iste
+                nulla
+                veniam, sit, ipsam vitae eligendi nostrum tempore quos praesentium
+                blanditiis
+                sapiente hic accusantium ipsa vel magni delectus incidunt unde fugit,
+                facere
+                debitis molestias adipisci? Commodi, fugit quae ut consequatur
+                blanditiis
+                unde
+                expedita alias ad perferendis, velit placeat ipsam.
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-2">
+            <div class="card shadow p-1">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea quo iste
+                nulla
+                veniam, sit, ipsam vitae eligendi nostrum tempore quos praesentium
+                blanditiis
+                sapiente hic accusantium ipsa vel magni delectus incidunt unde fugit,
+                facere
+                debitis molestias adipisci? Commodi, fugit quae ut consequatur
+                blanditiis
+                unde
+                expedita alias ad perferendis, velit placeat ipsam.
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-2">
+            <div class="card shadow p-1">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea quo iste
+                nulla
+                veniam, sit, ipsam vitae eligendi nostrum tempore quos praesentium
+                blanditiis
+                sapiente hic accusantium ipsa vel magni delectus incidunt unde fugit,
+                facere
+                debitis molestias adipisci? Commodi, fugit quae ut consequatur
+                blanditiis
+                unde
+                expedita alias ad perferendis, velit placeat ipsam.
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-2">
+            <div class="card shadow p-1">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea quo iste
+                nulla
+                veniam, sit, ipsam vitae eligendi nostrum tempore quos praesentium
+                blanditiis
+                sapiente hic accusantium ipsa vel magni delectus incidunt unde fugit,
+                facere
+                debitis molestias adipisci? Commodi, fugit quae ut consequatur
+                blanditiis
+                unde
+                expedita alias ad perferendis, velit placeat ipsam.
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,9 @@
+.sidebar-background{
+    transition-duration: 500ms;
+}
+
+@media only screen and (max-width: 600px) {
+    .sidebar-background {
+     margin-left: -60px;
+    }
+  }
