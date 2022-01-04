@@ -22,6 +22,9 @@ import { AngularDirectiveComponent } from './angular-directive/angular-directive
 import { AngularPipeComponent } from './angular-pipe/angular-pipe.component';
 import { SquireRootPipe } from './angular-pipe/custom-pipe/squire-root.pipe';
 import { SweetTitleDirective } from './angular-directive/custom-directive/sweet-title.directive';
+import { RightClickMenuComponent } from './right-click-menu/right-click-menu.component';
+import { TdFormComponent } from './td-form/td-form.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +42,9 @@ import { SweetTitleDirective } from './angular-directive/custom-directive/sweet-
     AngularPipeComponent,
     SquireRootPipe,
     SweetTitleDirective,
+    RightClickMenuComponent,
+    TdFormComponent,
+    ReactiveFormComponent,
   ],
   imports: [
     BrowserModule,

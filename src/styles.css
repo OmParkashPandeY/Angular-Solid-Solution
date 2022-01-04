@@ -1,2 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.min.css';
+
+
+/* Style Class for Color */
+.c-red {
+    color: rgb(255, 0, 0);
+}
+.c-green {
+    color: rgb(1, 131, 12);
+}
+.c-purple {
+    color: rgb(107, 0, 139);
+}
+.c-blue {
+    color: rgb(3, 22, 194);
+}
+.c-pink {
+    color: rgb(255, 0, 221);
+}
+.c-yellow {
+    color: rgb(255, 255, 0);
+}

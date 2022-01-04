@@ -1,0 +1,40 @@
+<div (click)="hideRightMenu()" style="min-height: 100vh;">
+    <br>
+    <h2 appSweetTitle>Right-click-menu Works!</h2>
+    <div class="container" (contextmenu)="rightClickMenu($event)" (click)="hideRightMenu()">
+        <div class="row my-3">
+            <div class="col-md-12">
+                <div class="card p-3 shadow">
+                    <h5 appSweetTitle class="py-3">Click Right Button And View Poppup Menu Action
+                    </h5>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, cum
+                    dignissimos
+                    impedit consequuntur qui, atque molestiae dolore harum voluptas ipsa corporis
+                    optio
+                    architecto illum tempore repellat beatae sed dolores necessitatibus quod in
+                    rerum!
+                    Sed dolorem voluptatum, numquam ratione nobis facere sapiente vitae odio
+                    voluptatibus impedit voluptates veniam laborum possimus blanditiis accusamus
+                    neque
+                    quia fuga voluptas dicta suscipit nisi quasi ut sequi modi! Neque consectetur
+                    fuga
+                    omnis quaerat magni rem quam inventore minus velit? Eius consequuntur numquam
+                    eveniet magni, quibusdam commodi eos doloribus, architecto quos blanditiis,
+                    deserunt
+                    ullam nisi soluta fugit beatae similique. Aliquam quisquam illo unde quod libero
+                    eum
+                    laborum!
+                </div>
+                <div class="dropdown-menu dropdown-menu-sm shadow" id="context-menu"
+                    style="min-width: 200px;">
+                    <a (contextmenu)="hideRightMenu()" (click)="hideRightMenu()"
+                        class="dropdown-item">Action</a>
+                    <a (contextmenu)="hideRightMenu()" (click)="hideRightMenu()"
+                        class="dropdown-item">Another action</a>
+                    <a (contextmenu)="hideRightMenu()" (click)="hideRightMenu()"
+                        class="dropdown-item">Something else here</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

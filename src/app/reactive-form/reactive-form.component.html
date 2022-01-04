@@ -1,0 +1,94 @@
+<br>
+
+<h3 appSweetTitle>reactive-form works!</h3>
+
+<form action="" [formGroup]="myReactiveForm" (ngSubmit)="submitMyForm()">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 bg-light py-1" [draggable]="true">
+                <div class="row justify-content-start py-1 my-1">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="form-head" style="text-align: left;">
+                            <b appSweetTitle>Form Title</b>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control"
+                                placeholder="Enter Your First Name" formControlName="firstName"
+                                id="firstName" [required]="true" minlength="2" maxlength="30">
+                            <p class="form-error">
+                                <span style="text-align: left;"
+                                    *ngIf="formValidationError('firstName',myReactiveForm);">
+                                    First Name is Required
+                                </span>
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control"
+                                placeholder="Enter Your Last Name" formControlName="lastName"
+                                id="lastName" [required]="true" minlength="2" maxlength="30">
+                            <p class="form-error">
+                                <span style="text-align: left;"
+                                    *ngIf="formValidationError('lastName',myReactiveForm);">
+                                    Last Name is Required
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Enter Your Email"
+                                formControlName="email" id="email" [required]="true" minlength="6"
+                                maxlength="30">
+                            <p class="form-error">
+                                <span style="text-align: left;"
+                                    *ngIf="formValidationError('email',myReactiveForm);">
+                                    Email is Required
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="form-group phoneNumber">
+                            <input type="number" class="form-control"
+                                placeholder="Enter Your Contact Number"
+                                formControlName="phoneNumber" id="phoneNumber" pattern="\d*"
+                                [required]="true" minlength="10" maxlength="10">
+                            <p class="form-error">
+                                <span style="text-align: left;"
+                                    *ngIf="formValidationError('phoneNumber',myReactiveForm);">
+                                    Phone Number Name is Required
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="form-group">
+                            <textarea type="text" placeholder="Enter Your Address"
+                                class="form-control" rows="3" minlength="12" maxlength="200"
+                                formControlName="address" id="address" [required]="true"></textarea>
+                            <p class="form-error">
+                                <span style="text-align: left;"
+                                    *ngIf="formValidationError('address',myReactiveForm);">
+                                    Address is Required
+                                </span>
+                            </p>
+
+                        </div>
+                    </div>
+                    <div
+                        class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex justify-content-end">
+                        <button type="button"
+                            class="btn btn-warning btn-md px-3 ml-2">Cancel</button>
+                        <button type="submit" class="btn btn-primary btn-md px-3 ml-2">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

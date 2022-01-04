@@ -10,7 +10,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { MockTestListComponent } from './mock-test-list/mock-test-list.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { RightClickMenuComponent } from './right-click-menu/right-click-menu.component';
 import { SignupComponent } from './signup/signup.component';
+import { TdFormComponent } from './td-form/td-form.component';
 import { TemplateComponent } from './template/template.component';
 import { EditUsersComponent } from './users/edit-users/edit-users.component';
 import { UsersComponent } from './users/users.component';
@@ -38,6 +41,18 @@ const routes: Routes = [
       {
         path: 'directive',
         component: AngularDirectiveComponent,
+      },
+      {
+        path: 'contextmenu',
+        component: RightClickMenuComponent,
+      },
+      {
+        path: 'td-form',
+        component: TdFormComponent,
+      },
+      {
+        path: 'reactive-form',
+        component: ReactiveFormComponent,
       }
     ],
   },

@@ -1,0 +1,72 @@
+<br>
+<p>
+    <marquee behavior="sliding" direction="left" scrollamount="10">
+        <p class="bg-light pb-1 px-2">
+            🚚 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga tempora dolor, ea odio
+            maxime
+            a dolorum laudantium eum laboriosam odit magnam repellendus quam doloremque alias?
+        </p>
+    </marquee>
+</p>
+<h3 appSweetTitle>td-form works!</h3>
+
+<form action="" #myForm="ngForm" (ngSubmit)="submitMyForm(myForm.value)">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 bg-light py-1" [draggable]="true">
+                <div class="row justify-content-start py-1 my-1">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="form-head" style="text-align: left;">
+                            <b appSweetTitle>Form Title</b>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control"
+                                placeholder="Enter Your First Name" name="firstName" ngModel
+                                id="firstName" [required]="true" minlength="2" maxlength="30">
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control"
+                                placeholder="Enter Your Last Name" name="lastName" ngModel
+                                id="lastName" [required]="true" minlength="2" maxlength="30">
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Enter Your Email"
+                                name="email" ngModel id="email" [required]="true" minlength="6"
+                                maxlength="30">
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="form-group phoneNumber">
+                            <input type="number" class="form-control"
+                                placeholder="Enter Your Contact Number" name="phoneNumber" ngModel
+                                id="phoneNumber" pattern="\d*" [required]="true" minlength="10"
+                                maxlength="10">
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="form-group">
+                            <textarea type="text" placeholder="Enter Your Address"
+                                class="form-control" rows="3" minlength="12" maxlength="200"
+                                name="address" ngModel id="address" [required]="true"></textarea>
+
+                        </div>
+                    </div>
+                    <div
+                        class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex justify-content-end">
+                        <button type="button"
+                            class="btn btn-warning btn-md px-3 ml-2">Cancel</button>
+                        <button type="submit" [disabled]="myForm.invalid"
+                            class="btn btn-primary btn-md px-3 ml-2">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
